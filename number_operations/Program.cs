@@ -15,22 +15,25 @@
         
 
 
-        Console.Write("Whole list: [ ");
-        foreach (ValueType x in number_list) {
-            Console.Write(x + "; ");
-        }
+        // Console.Write("Whole list: [ ");
+        // foreach (ValueType x in number_list) {
+        //     Console.Write(x + "; ");
+        // }
+        Console.WriteLine("Whole List: " + TransformList(number_list, (ValueType x) => x.ToString()));
         
-        Console.Write("]\n\nList rounded to ints: [ ");
-        foreach (ValueType x in number_list) {
-            Console.Write(Convert.ToInt64(x) + "; ");
-        }
+        // Console.Write("]\n\nList rounded to ints: [ ");
+        // foreach (ValueType x in number_list) {
+        //     Console.Write(Convert.ToInt64(x) + "; ");
+        // }
+        Console.WriteLine("List rounded to ints: " + TransformList(number_list, (x)=> Convert.ToInt64(x).ToString()));
 
-        Console.Write("]\n\nList formatted to 2 decimals: [ ");
-        foreach (ValueType x in number_list) {
-            Console.Write(Convert.ToDecimal(x).ToString("0.00") + "; ");
-        }
+        // Console.Write("]\n\nList formatted to 2 decimals: [ ");
+        // foreach (ValueType x in number_list) {
+        //     Console.Write(Convert.ToDecimal(x).ToString("0.00") + "; ");
+        // }
+        Console.WriteLine("List formatted to 2 decimals: " + TransformList(number_list,(x) => Convert.ToDecimal(x).ToString("0.00")));
 
-        Console.Write("]\n\n");
+        // Console.Write("]\n\n");
         Dictionary<Type, List<ValueType>> num_lists = new Dictionary<Type, List<ValueType>>();
         foreach (ValueType x in number_list)
         {
@@ -41,21 +44,31 @@
 
         foreach (KeyValuePair<Type, List<ValueType>> x in num_lists)
         {
-            Console.Write(x.Key.ToString().Split(".").Last() + " list: [ ");
-            x.Value.ForEach((ValueType x) => {Console.Write(x + "; ");});
-            Console.WriteLine("]");
+            // Console.Write(x.Key.ToString().Split(".").Last() + " list: [ ");
+            // x.Value.ForEach((ValueType x) => {Console.Write(x + "; ");});
+            // Console.WriteLine("]");
+            Console.Write(x.Key.ToString().Split(".").Last() + " list: " + TransformList(x.Value,(y) => y.ToString()) + "\n");
         }
 
 
-        Console.Write("\nIntegers: [ ");
+        // Console.Write("\nIntegers: [ ");
         List<ValueType> integers = new List<ValueType>();
         foreach(ValueType x in number_list) {
             if(Convert.ToDecimal(x) % 1 == 0){
                 integers.Add(x);
             }
         }
-        integers.ForEach((ValueType x) => {Console.Write(x+"; ");});
-        Console.WriteLine("]");
+        // integers.ForEach((ValueType x) => {Console.Write(x+"; ");});
+        // Console.WriteLine("]");
+        Console.WriteLine("Integers: " + TransformList(integers,(x) => x.ToString()));
+    }
+
+    public static string TransformList(List<ValueType> list,Func<ValueType,string> func) {
+        string res = "[";
+        foreach(ValueType num in list) {
+            res += func(num) + "; ";
+        }
+        return string.Join("",res.Take(res.Length - 2)) + "]";
     }
 
 }

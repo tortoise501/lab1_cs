@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kate\\RiderProjects\\number_operations\\number_operations\\number_operations.csproj": {}
+    "C:\\Users\\Danylo\\Desktop\\NumberFork\\lab1_cs\\number_operations\\number_operations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kate\\RiderProjects\\number_operations\\number_operations\\number_operations.csproj": {
+    "C:\\Users\\Danylo\\Desktop\\NumberFork\\lab1_cs\\number_operations\\number_operations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kate\\RiderProjects\\number_operations\\number_operations\\number_operations.csproj",
+        "projectUniqueName": "C:\\Users\\Danylo\\Desktop\\NumberFork\\lab1_cs\\number_operations\\number_operations.csproj",
         "projectName": "number_operations",
-        "projectPath": "C:\\Users\\Kate\\RiderProjects\\number_operations\\number_operations\\number_operations.csproj",
-        "packagesPath": "C:\\Users\\Kate\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kate\\RiderProjects\\number_operations\\number_operations\\obj\\",
+        "projectPath": "C:\\Users\\Danylo\\Desktop\\NumberFork\\lab1_cs\\number_operations\\number_operations.csproj",
+        "packagesPath": "C:\\Users\\Danylo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danylo\\Desktop\\NumberFork\\lab1_cs\\number_operations\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kate\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Danylo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
